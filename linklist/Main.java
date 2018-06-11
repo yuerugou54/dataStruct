@@ -1,24 +1,15 @@
 package linklist;
 
 public class Main {
-	private int count = 1;
-
 	public static void main(String[] arg) {
 		LinkList<Integer> linkList = new LinkList<Integer>();
 		Integer[] arrT = { 5, 4, 3, 2, 1 };
 		linkList = linkList.initalLinkList(arrT);
 		linkList = Main.ReverseList(linkList);
-		while (linkList != null) {
-			System.out.println(linkList.data);
-			linkList = linkList.next;
-		}
-		Main main = new Main();
-		try {
-			main.call();
-		} catch (Exception e) {
-			System.out.println("stack length:" + main.count);
-			// throw e;
-		}
+
+		linkList.printLink(linkList);
+
+		FindKthToTail.FindKthToTail_2(linkList, 12);
 
 	}
 
@@ -33,11 +24,6 @@ public class Main {
 			htemp = temp;
 		}
 		return temp;
-	}
-
-	public void call() {
-		count++;
-		call();
 	}
 
 }

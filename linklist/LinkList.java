@@ -23,4 +23,12 @@ public class LinkList<T> {
 		}
 		return linkList;
 	}
+
+	public void printLink(LinkList<T> linkList) {
+		while (linkList != null) {
+			System.out.print(linkList.data + "\n");
+			linkList = linkList.next;
+		}
+	}
+
 }
