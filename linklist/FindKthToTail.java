@@ -4,13 +4,13 @@ import java.util.Stack;
 
 public class FindKthToTail {
 
-	// ·½·¨1£¬Ê¹ÓÃÁ½¸öÖ¸Õë¡£Á½Ö¸ÕëµÄ¾àÀëÊ¼ÖÕÏà²îi,×¢Òâ´úÂëµÄÂ³°ôĞÔ
+	// æ–¹æ³•1ï¼Œä½¿ç”¨ä¸¤ä¸ªæŒ‡é’ˆã€‚ä¸¤æŒ‡é’ˆçš„è·ç¦»å§‹ç»ˆç›¸å·®i,æ³¨æ„ä»£ç çš„é²æ£’æ€§
 	public static LinkList<Integer> FindKthToTail_1(LinkList<Integer> root, int i) {
 		LinkList<Integer> temp1, temp2;
 		temp1 = temp2 = root;
-		int count = 0;// µÃµ½Á´±í³¤¶È
+		int count = 0;// å¾—åˆ°é“¾è¡¨é•¿åº¦
 		if (i <= 0)
-			return null;// ×¢Òâ´úÂëÂ³°ôĞÔ£¬iÖµ²»ÄÜÒì³£
+			return null;// æ³¨æ„ä»£ç é²æ£’æ€§ï¼Œiå€¼ä¸èƒ½å¼‚å¸¸
 		while (temp1 != null) {
 			temp1 = temp1.next;
 			count++;
@@ -20,13 +20,13 @@ public class FindKthToTail {
 		}
 		if (count < i)
 			return null;
-		System.out.println("½á¹ûÊÇ£º" + temp2);
+		System.out.println("ç»“æœæ˜¯ï¼š" + temp2);
 		temp2.printLink(temp2);
 		return temp2;
 
 	}
 
-	// ·½·¨2£¬Ê¹ÓÃÕ»À´²Ù×÷
+	// æ–¹æ³•2ï¼Œä½¿ç”¨æ ˆæ¥æ“ä½œ
 	public static <T> LinkList<T> FindKthToTail_2(LinkList<T> root, int i) {
 		Stack<LinkList<T>> stack = new Stack<>();
 		if (i < 1)
@@ -46,7 +46,7 @@ public class FindKthToTail {
 			}
 
 		}
-		System.out.println("Êä³ö");
+		System.out.println("è¾“å‡º");
 		node.printLink(node);
 		return node;
 	}
