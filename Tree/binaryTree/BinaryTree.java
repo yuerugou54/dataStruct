@@ -1,23 +1,24 @@
 package Tree.binaryTree;
 
 /*
- * Á´Ê½¶þ²æÊ÷£¬¶¨Òå
+ * ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 public class BinaryTree<T extends NodeData> {
-	public final static int MAXLEN = 20;// ¶¨Òå×î´ó³¤¶È
-	T nodeData;
-	BinaryTree<T> leftTree;
-	BinaryTree<T> rightTree;
+    public final static int MAXLEN = 20;// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó³¤¶ï¿½
+    T nodeData;
+    BinaryTree<T> leftTree;
+    BinaryTree<T> rightTree;
 
-	public BinaryTree() {
-		nodeData = null;
-		leftTree = null;
-		rightTree = null;
-	}
+    public BinaryTree() {
+        nodeData = null;
+        leftTree = null;
+        rightTree = null;
+        rightTree = new BinaryTree<T>();
+    }
 }
 
 class NodeData {
-	int data = 0;// ÊýÖµ
-	int index = 1;// ¶þ²æÊ÷Ë÷Òý£¬³õÊ¼ÖµÎª1£¬×î´óÖµÎªMAXLEN
+	int data = 0;// ï¿½ï¿½Öµ
+	int index = 1;// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ÖµÎª1ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÎªMAXLEN
 	String aa="maxiaodong";
 }
