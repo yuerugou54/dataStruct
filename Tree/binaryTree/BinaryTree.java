@@ -19,4 +19,5 @@ public class BinaryTree<T extends NodeData> {
 class NodeData {
 	int data = 0;// 数值
 	int index = 1;// 二叉树索引，初始值为1，最大值为MAXLEN
+	String aa="maxiaodong";
 }
